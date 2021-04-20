@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Sprint 2</title>
+</head>
+
+<body class="flex column" onload="init()">
+    <header class="header">
+        <div class="container nav-bar flex space-between align-center">
+            <div class="logo"><img src="/img/logo/LOGO.png" /></div>
+            <ul class="main-nav">
+                <button><a href="#" onclick="openGallery()">Gallery</a></button>
+                <button><a href="#">Memes</a></button>
+                <button><a href="#">About</a></button>
+
+            </ul>
+            
+        </div>
+    </header>
+
+    <section class="main-content">
+
+        <div class="modal-edit ">
+            <div class="card canvas-container">
+
+            </div>
+            <div class="card tools">
+                <input class="container-tool" type="text" name="" id="" value="Enter text" oninput="onUpdateTxtLine(value)">
+
+                <ul class="container-tool clean-list flex">
+                    <li><button>^</button></li>
+                    <li><button>+</button></li>
+                    <li><button>R</button></li>
+                </ul>
+
+                <div class="container-tool style-tool flex space-between wrap">
+                    <button onclick="onResizeTxt(10)">&#128077;</button>
+                    <button onclick="onResizeTxt(-10)">&#128078; </button>
+                    <button onclick="onSetAlign('left')"> &#128072; </button>
+                    <button onclick="onSetAlign('center')">&#128071; </button>
+                    <button onclick="onSetAlign('right')">&#x1F449; </button>
+                    <select>
+                        <option>font </option>
+                    </select>
+                    <button>s_</button>
+                    <button>C</button>
+                </div>
+
+                <div class="container-tool sticker-tool">
+
+                </div>
+                <div class="container-tool">
+                    <button>Share</button>
+                    <button>Download</button>
+                    <button >Return</button>
+                    <span onclick="document.getElementById('container-gallery').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-gallery flex">
+            <div class="gallery-menu flex space-between">
+                <input type="text" name="img-search" id="img-search" placeholder="Search">
+                </div>
+            </div>
+            <div class="gallery flex wrap space-between">
+            </div>
+            <div>                <button><a href="#"></a>
+                <form action="/action_page.php">
+                    <label for="cars">language</label>
+                    <select id="cars" name="cars">
+                      <option value="volvo">English</option>
+                      <option value="saab">עברית</option>
+                    </select>
+                    <input type="submit">
+                  </form>
+            </button></div>
+            
+
+        </div>
+    </section>
+
+    <script src="js/util-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/meme-service.js"></script>
+    <script src="js/meme-controler.js"></script>
+</body>
+
+</html>
