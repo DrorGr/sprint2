@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body onload="onInit()">
+  <nav class="nav-bar">
+    <div class="logo"><img src="../img/body/LOGO.png"  width="200" alt="" ></div>
+    <li class="nav-bar-pages">
+      <ul onclick="onGoToGallery()">Gallery</ul>
+      <ul onclick="onGoToEdit()">Edit</ul>
+      <ul onclick="onGoToAbout()">About</ul>
+      
+  </nav>
+  <div class="gallery-header">
+    <div class="wrapper">
+      <h1>Pick one and make me laugh</h1>
+    </div>
+
+  </div>
+  <div class="gallery"></div>
+  </div>
+  <div class="About"> you are to make me laugh
+  <div class="edit-meme">
+    <div class="settings">
+      <!-- **section1** -->
+      <section class="section-1">
+        <div class="input">
+          <input class="input-txt" type="text" id="text" value="" placeholder="Write here your meme..." name="input-txt" onkeyup="onSetText(this.value)">
+        </div>
+      </section>
+      <!-- **section2** -->
+      <section class="section-2">
+        <button onclick="onAddLine()"><img src=".\img\btn\add.png" height="70" /></button>
+        <button onclick="onMoveLine()"><img src=".\img\btn\toggle.png" height="70"  /></button>
+        <button onclick="onDeleteLine()"><img src=".\img\btn\delete.png" height="70" /></button>
+      </section>
+
+      <!-- **section3** -->
+      <style>
+        span {
+  font-size: 30px;
+}
+      </style>
+      <section class="section-3">
+        <button onclick="onSetAlign('left')"><span>&#128072;</span> </button>
+        <button onclick="onSetAlign('center')"><p><span>&#128080;</span></button>
+        <button onclick="onSetAlign('right')"><span>&#128073;</span></button>
+        <button onclick="onResizeTxt(10)"><span>&#128077;</span></button>
+        <button onclick="onResizeTxt(-10)"><span>&#128078;</span></button>
+        <button onclick="onSetLineHight(-10)"><span>&#128070;</span></button>
+        <button onclick="onSetLineHight(10)"><span>&#128071;</span></button>
+        <div class="select-color">
+        <img class="select-color-img" src="img\btn\palette.png" height="60" />
+        <input class="input-color" type="color" value="#ffffff" onchange="onSetColorText(this.value)">
+        <img class="select-stroke-img" src="img\btn\stroke.png" height="60" />
+        <button><input class="input-sroke" type="color" value="#ffffff"
+            onchange="onSetColorStroke(this.value)"></button>
+    </div>
+    </section>
+    <!-- **section4** -->
+    <section class="section-4">
+      <div class="download">
+   <a href="#" onclick="downloadCanvas(this)" download="asdsad"><img src="img\btn\download.png" height="60" /></a> 
+      </div>
+    </section>
+    <section></section>
+
+
+  </div class="canvas-container" >
+    <div class="meme-canvas">
+      <canvas id="canvas" height="430" width="430"></canvas>
+    </div>
+    
+    
+  </div>
+
+  <div class="gallery-footer">
+    <div class="wrapper">
+      <h1>Dror's funny mode</h1>
+    </div>
+
+
+  <script src="js\memeService.js"></script>
+  <script src="js\controler.js"></script>
+</body>
+
+</html>
