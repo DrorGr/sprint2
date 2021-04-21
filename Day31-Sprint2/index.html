@@ -11,11 +11,13 @@
 
 <body onload="onInit()">
   <nav class="nav-bar">
-    <div class="logo"><img src="../img/body/LOGO.png"  width="200" alt="" ></div>
+    
     <li class="nav-bar-pages">
+      <div class="logo"><img src="../img/body/LOGO.png"  width="200" style="left: 20px;" ></div>
       <ul onclick="onGoToGallery()">Gallery</ul>
       <ul onclick="onGoToEdit()">Edit</ul>
       <ul onclick="onGoToAbout()">About</ul>
+      
       
   </nav>
   <div class="gallery-header">
@@ -26,23 +28,22 @@
   </div>
   <div class="gallery"></div>
   </div>
-  <div class="About"> you are to make me laugh
   <div class="edit-meme">
     <div class="settings">
-      <!-- **section1** -->
+   
       <section class="section-1">
         <div class="input">
           <input class="input-txt" type="text" id="text" value="" placeholder="Write here your meme..." name="input-txt" onkeyup="onSetText(this.value)">
         </div>
       </section>
-      <!-- **section2** -->
+      
       <section class="section-2">
         <button onclick="onAddLine()"><img src=".\img\btn\add.png" height="70" /></button>
         <button onclick="onMoveLine()"><img src=".\img\btn\toggle.png" height="70"  /></button>
         <button onclick="onDeleteLine()"><img src=".\img\btn\delete.png" height="70" /></button>
       </section>
 
-      <!-- **section3** -->
+      
       <style>
         span {
   font-size: 30px;
@@ -64,13 +65,19 @@
             onchange="onSetColorStroke(this.value)"></button>
     </div>
     </section>
-    <!-- **section4** -->
+    
     <section class="section-4">
       <div class="download">
-   <a href="#" onclick="downloadCanvas(this)" download="asdsad"><img src="img\btn\download.png" height="60" /></a> 
+   <a href="#" onclick="downloadCanvas(this)" download="asdsad"><img src="img\btn\download.png" style="width: 200px;" /></a>
       </div>
     </section>
-    <section></section>
+    <section class="share">
+      <div class="download">
+        <a href="www.facebook.com"><img src="img\btn\share.png" alt="" style="width: 60px;"></a>
+        <a href="www.instagram.com"><img src="img\btn\instagramshare.png" alt="" style="width: 60px;"></a>
+      </div>
+
+    </section>
 
 
   </div class="canvas-container" >

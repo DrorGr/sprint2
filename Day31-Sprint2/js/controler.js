@@ -77,7 +77,7 @@ function onGoToGallery() {
 function onGoToEdit() {
   document.querySelector('.edit-meme').style.display = "flex";
   document.querySelector('.gallery').style.display = "none";
-  document.querySelector('.gallery-header').style.display = "none";
+  document.querySelector('.gallery-header').style.display = "flex";
   
 }
 
